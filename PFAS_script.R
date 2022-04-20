@@ -100,4 +100,3 @@ ggplot(BP_SIU,mapping=aes(Compound,textResult,color=Compound))+geom_point()+face
   labs(title="Avg. Reportable Conc.(ng/L) of PFAS compounds found in Bucklin Point Industrial Users")+
   ylab("Avg. Conc. (ng/L)")+xlab("Compound")+theme(text = element_text(size = 8)) 
 
-
