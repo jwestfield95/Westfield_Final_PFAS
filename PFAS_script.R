@@ -5,7 +5,7 @@ library(lubridate)
 library(title)
 library(moderndive)
 
-#Code to Acess the Data
+#Code to Access the Data
 All_Data_pfas <- read.csv("~/Westfieldfinalproject/pfas/All_Data_pfas.csv")
 
 ########################################################################################
