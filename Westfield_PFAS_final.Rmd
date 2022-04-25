@@ -216,3 +216,54 @@ Industries discharging PFAS contaminated water were also analyzed, and it was ob
 Average daily loads would need to be calculated to determine how much of an effect these industries have on PFAS concentrations inside the wastewater facilities. These industries may need to implement forms of pretreatment to limit the amount of PFAS concentrations discharged into the Fields Point and Bucklin Point influents.  Knowing what industries discharge the highest concentrations of PFAS compounds is important because if there is an increase in PFAS concentrations at Fields or Bucklin Point, the Narragansett Bay can point to these industries as a potential source.  
 
 
+
+
+
+
+**Works cited:**
+
+
+
+Basic Information on PFAS. (2021, April 06). Retrieved from https://www.epa.gov/pfas/basic-	information-pfas#difference
+
+Becker, A.M., Suchan, M., Gerstmann, S. et al. Perfluorooctanoic acid and perfluorooctane s	ulfonate released from a waste water treatment plant in Bavaria, Germany. 	(2010). Environ Sci Pollut Res 17, 1502–1507. https://doi.org/10.1007/s11356-010-0335-	x
+
+Coggan, Timothy L., Damien Moodie, Adam Kolobaric, Drew Szabo, Jeff Shimeta, Nicholas D. 	Crosbie, Elliot Lee, Milena Fernandes, Bradley O. Clarke. (2019). An investigation into 	per- and polyfluoroalkyl substances (PFAS) in nineteen Australian wastewater treatment 	plants (WWTPs). Heliyon 5(8), e02316. https://doi.org/10.1016/j.heliyon.2019.e02316.
+
+Cressler, A. (2021). Wastewater Treatment Water Use. Retrieved June 10, 2021, from 	https://www.usgs.gov/special-topic/water-science-school/science/wastewater-treatment-	water-use?qt-science_center_objects=0#qt-science_center_objects
+	"USGS"
+	
+EPA. METHOD 533: DETERMINATION OF PER- AND POLYFLUOROALKYL SUBSTANCES IN DRINKING WATER BY ISOTOPE DILUTION ANION EXCHANGE SOLID PHASE EXTRACTION AND LIQUID CHROMATOGRAPHY/TANDEM MASS SPECTROMETRY, EPA, METHOD 533: DETERMINATION OF PER- AND POLYFLUOROALKYL SUBSTANCES IN DRINKING WATER BY ISOTOPE DILUTION ANION EXCHANGE SOLID PHASE EXTRACTION AND LIQUID CHROMATOGRAPHY/TANDEM MASS SPECTROMETRY. Method 533: Determination of Per- and Polyfluoroalkyl Substances in Drinking Water by Isotope Dilution Anion Exchange Solid Phase Extraction and Liquid Chromatography/Tandem Mass Spectrometry (epa.gov)
+
+EPA. METHOD 537: “EPA Document #: EPA/600/R-20/006.” DETERMINATION OF SELECTED PER- AND POLYFLUORINATED ALKYL SUBSTANCES IN DRINKING WATER BY SOLID PHASE EXTRACTION AND LIQUID CHROMATOGRAPHY/TANDEM MASS SPECTROMETRY (LC/MS/MS), EPA, Mar. 2020, file:///C:/Users/JakeW/Downloads/METHOD%20537_1_REV2_FINAL.PDF. 
+
+Gallen, C., G. Eaglesham, D. Drage, T. Hue Nguyen, and  J.F. Mueller. (2018). A mass estimate 	of perfluoroalkyl substance (PFAS) release from Australian wastewater treatment plants. 	Chemosphere 208, 975-983. https://doi.org/10.1016/j.chemosphere.2018.06.024.
+
+Hamid, H., & Li, L. (2016). Role of wastewater treatment plant in environmental cycling of 	poly- and perfluoroalkyl substances. Ecocycles, 2(2), 43–53. 	https://doi.org/10.19040/ecocycles.v2i2.62
+
+ITRC. 2020.Naming Conventions of Per- and Polyfluoroalkyl Substances (PFAS) (itrcweb.org)
+
+Lenka, Swadhina Priyadarshini, Melanie Kah, Lokesh P. Padhye. (2021). A review of the 	occurrence, transformation, and removal of poly- and perfluoroalkyl substances (PFAS) 	in wastewater treatment plants. Water Research, 199, 117187. 	https://doi.org/10.1016/j.watres.2021.117187.
+
+McGregor, R. (2018). In Situ treatment of PFAS-impacted groundwater using colloidal activated 	Carbon. Remediation 28, 33–41.
+
+Mcknight, Taryn. (2021 February 3).  PFAS State of the Union: A look at what is to Come in 	2021 [Webinar]. Eurofins Environment Testing America.
+	https://attendee.gotowebinar.com/register/6045831124353479179
+	
+Mcknight, Taryn. (2021 February 10). PFAS Basics: An introduction to the Chemistry Sources, Regulations and Analysis [Webinar]. Eurofins Environment Testing America. https://attendee.gotowebinar.com/register/2698919928581208843
+
+Mcknight, Taryn and D., Kaminksi. (2021 February 24).  PFAS: Sample Collection, State of the 	Science[Webinar]. Eurofins Environment Testing America. 	https://attendee.gotowebinar.com/register/54352571531108875
+
+Mcknight, Taryn. (2021 March 9). PFAS: Navigating Analytical Method Options [Webinar]. 	Eurofins Environment Testing America.  
+	https://attendee.gotowebinar.com/register/5833571504874166542
+
+Neslund, Charles. (2021 March 30). PFAS: Forensic Tools: TOF, TOP Assay and Non-Target 	Analysis [Webinar]. Eurofins Environment Testing America.  
+	https://attendee.gotowebinar.com/register/972698768661176333
+
+Suthersan, S. S. (2017). Remediation engineering: Design concepts. Boca Raton, FL: CRC Press, 	Taylor & Francis Group.
+
+Yu, Jing, Jiangyong Hu, Shuhei Tanaka, Shigeo Fujii. (2009). Perfluorooctane sulfonate (PFOS) 	and perfluorooctanoic acid (PFOA) in sewage treatment plants. Water Research, 43(9), 	2399-2408. https://doi.org/10.1016/j.watres.2009.03.009.
+
+Ziyad, Abunada, Motasem Y.D. Alazaiza, and Mohammed J.K. Bashir. (2020). "An Overview of 	Per- and Polyfluoroalkyl Substances (PFAS) in the Environment: Source, Fate, Risk and 	Regulations" Water 12, no. 12: 3590. https://doi.org/10.3390/w12123590
+
+
