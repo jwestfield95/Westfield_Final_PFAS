@@ -40,9 +40,9 @@ All_Data_pfas<- read.csv("~/Westfieldfinalproject/pfas/All_Data_pfas.csv")
 
   The Narragansett Bay Commission conducted a nine-month study (September 2020 to May 2021) to determine the average concentration (ng/L) of PFAS compounds in the influents, effluents, and filter cake/biosolid (ug/kg) at Fields Point and Bucklin Point facilities. All samples taken during the nine-month study detected PFAS compounds, but Fields Point tended to have higher average PFAS concentrations compared to Bucklin Point.  Average concentrations of PFOS and PFOA at both facilities were below EPA drinking water regulatory limits (70ug/L).  There was no statistical difference between average influent concentrations and average effluent concentration for each compound at both facilities. Overall, filter cake PFAS concentrations were lower than influents and effluents. 
   
-  Additionally, Industries that discharge wastewater into Fields point and Bucklin point wastewater facilities were also sampled to determine what industries contribute the most PFAS to the wastewater facilities.  This was important because if the source of PFAS compounds is known, the Narragansett Bay Commission can enforce major users of PFAS into implementing pre-treatment systems to lower the PFAS concentrations entering the wastewater facilities.  This would then reduce the concentration of PFAS compounds leaving the facilities and entering the Bay.  
+  Additionally, Industries that discharge wastewater into Fields point and Bucklin point facilities were also sampled to determine what industries contribute the most PFAS to the wastewater facilities. There was a significant difference between the PFAS compound concentration and the type of industry discharging PFAS contaminated water to both facilities.  This is important because if the source of PFAS compounds is known, the Narragansett Bay Commission can enforce major users of PFAS into implementing pre-treatment systems to lower the PFAS concentrations entering the wastewater facilities.  This would then reduce the concentration of PFAS compounds leaving the facilities and entering the Bay.  
 
-**Introduction**: 
+**INTRODUCTION**: 
 
   Per and Polyfluoroalkyl substances (PFAS) are a group of synthetic fluorinated compounds where hydrogen atoms in aliphatic carbon chains are either fully (per) or partially (poly) replaced with fluorine atoms.  The carbon-fluorine backbone creates a bond resistant to biochemical degradation.   PFAS are applied in metal plating, photography, aviation, and firefighting foams (McGregor 2018).  PFAS compounds are also utilized in consumer products like non-stick cookware, carpets, and paper (Hamid and Li 2016). PFAS at high concentrations increases risk of various cancers and has been observed to affect the development of children and fetuses (McGregor 2018, EPA 2021). 
 
@@ -62,7 +62,7 @@ PFAAs are denoted by the formula PFXY (PF=perfluoro, X=carbon chain length, Y=fu
 For the sake of this study, all long names have been condensed into their short names by using the formula PFXY. 
 
 
-**Methods**:
+**METHODS**:
 
   The Narragansett Bay Commission conducted a nine-month study (September 2020 to May 2021) to determine a baseline of how much PFAS enters the facilities and leaves the facilities. Samples analyzed for PFAS included daily composited Influent, Effluent, and Filter Cake at both Fields and Bucklin point locations. Samples from contributing industries were also sampled during this nine-month study. Samples were collected in HPDE bottles provided by ESS laboratories to avoid further PFAS contamination.  Influent and Effluent samples at both locations were sampled simultaneously as followed: October (n=1), November (n=4), December (n=5), January (n=2), February (n=1), March (n=1), April (n=1), May (n=1).  Filter cake samples at both locations were sampled simultaneously as followed: September (n=5), October (n=4), November (n=4), December (n=5), January (n=4), February (n=4), March (n=5), April (n=4), May (n=3).  Influent and Effluent samples were taken on average twice a month while filter cake samples were taken 4 times a month on average.  Industries thought that have been contributing to PFAS concentrations were each sampled once due to the multitude of industries and finical constraints. 
 
@@ -70,7 +70,9 @@ For the sake of this study, all long names have been condensed into their short 
   
 Data had been entered into an excel spread sheet called All_data_pfas.xls and was imported into R where an Rscript was created to allow for reproducibility when new data is entered into the excel sheet.  The Rscript streamlines the process for producing plots of average reportable concentrations for Fields Point PFAS, Bucklin Point PFAS, and their respective contributing PFAS industrial users.  
 
-**Results:**
+
+
+**RESULTS:**
 
 **FIELDS POINT WASTEWATER FACILITY**
 
@@ -78,7 +80,7 @@ During the study, 13 PFAS compounds had reportable average concentrations for Fi
 
 The 3 other PFAS compounds were only found in the solid waste and were not seen in the fields point influent or effluent.  This means that EtFOSAA, MeFOSAA, and PFDoA must adsorb to solid matrices more easily and do not stay in the water phase. 
 
-16 industries that discharge wastewater to the Fields Point wastewater facility had reportable PFAS concentrations(Figure 4).  RI Resource Recovery, International Chromium Plating, Textron, Inc., and DiFruscia Industries Inc. use the most PFAS compounds, but RI Resource Recovery and Mahr Federal Inc. contributed the highest concentration of PFAS compounds.  RI Resource Recovery had PFBS concentration greater than 2000 ng/L.
+16 industries that discharge wastewater to the Fields Point wastewater facility had reportable PFAS concentrations(Figure 4).  RI Resource Recovery, International Chromium Plating, Textron, Inc., and DiFruscia Industries Inc. use the most PFAS compounds, but RI Resource Recovery and Mahr Federal Inc. contributed the highest concentration of PFAS compounds.  RI Resource Recovery had an average PFBS concentration greater than 2000 ng/L.
 
 
 **BUCKLIN POINT WASTEWATER FACILITY**
@@ -102,7 +104,6 @@ FP_INF_EFF<-rbind(FP_EFFLUENT,FP_INFLUENT)
 #graph of FP INF AND EFF reportable PFAS compound concentrations 
 ggplot(FP_INF_EFF,mapping=aes(Description,textResult,fill=Description))+geom_col()+
   facet_wrap(~Compound)+scale_x_discrete(limits=c("FP Influent","FP Final Effluent"))+
- labs(title="Avg. Reportable Conc.(ng/L) of PFAS compounds at Fields Point from Oct. 2020 to May 2021")+
     ylab("Avg. Concenration (ng/L)")+xlab(" ")+theme(legend.position = "none")+theme(axis.text.x = element_text(angle = -90))
 
 model_FP<-lm(textResult~Description, data=FP_INF_EFF)
@@ -127,7 +128,6 @@ BP_INF_EFF<-rbind(BP_EFFLUENT,BP_INFLUENT)
 
 ggplot(BP_INF_EFF,mapping=aes(Description,textResult,fill=Description))+geom_col()+
   facet_wrap(~Compound)+scale_x_discrete(limits=c("BP Influent","BP Final Effluent"))+
-  labs(title="Avg. Reportable Conc.(ng/L) of PFAS compounds at Bucklin Point from Oct. 2020 to May 2021")+
   ylab("Avg. Concenration (ng/L)")+xlab(" ")+theme(legend.position = "none")+theme(axis.text.x = element_text(angle = -90))
 
 model_BP<-lm(textResult~Description,data=BP_INF_EFF)
@@ -150,7 +150,6 @@ FP_BP_FCAK<-rbind(FP_FCAK,BP_FCAK)
        
 ggplot(FP_BP_FCAK,mapping=aes(Description,textResult,fill=Description))+geom_col()+
   facet_wrap(~Compound)+scale_x_discrete(limits=c("FP Filter Cake","BP Filter Cake"))+
-  labs(title="Avg. Reportable Conc.(ug/Kg) of PFAS compounds in Fields Point and Bucklin Point Filter Cake from October 2020 to May 2021")+
   ylab("Avg. Concenration (ug/Kg)")+xlab(" ")+theme(legend.position = "none")+theme(axis.text.x = element_text(angle = -90))
 
 model_fcak<-lm(textResult~Description,data=FP_BP_FCAK)
@@ -159,7 +158,7 @@ summaryFCAK<-get_regression_summaries(model_fcak)%>% pull(p_value)
 
 
 ```
-**Figure 3:**Average Reportable Concentrations (ug/kg) of PFAS compounds found in Fields Point and Bucklin Point filtercake/biosolid from September 2020 to May 2021. Filter cake samples at both locations were sampled simultaneously as followed: September (n=5), October (n=4), November (n=4), December (n=5), January (n=4), February (n=4), March (n=5), April (n=4), May (n=3). Samples that had qualifiers of "J" and "U" (J= under reporting limit and U=non-detectable) were dismissed from analysis. Six PFAS compounds with reportable average concentrations were found in Fields Point Filter Cake with compound EtFOSAA having the highest concentration of 10 ug/kg. Compounds PFDoA and PFPes were unique to Fields Point filter cake.Six PFAS compounds with reportable average concentrations were found in Bucklin Point Filter Cake with compound PFOS having the highest concentration of 18 ug/kg. Compounds PFTRDA and PFUnA were unique to Bucklin Point filter Cake. There was no significant difference between Bucklin Point influent PFAS compound concentration and effluent PFAS compound concentration(P=`r summaryBP`)
+**Figure 3:**Average Reportable Concentrations (ug/kg) of PFAS compounds found in Fields Point and Bucklin Point filtercake/biosolid from September 2020 to May 2021. Filter cake samples at both locations were sampled simultaneously as followed: September (n=5), October (n=4), November (n=4), December (n=5), January (n=4), February (n=4), March (n=5), April (n=4), May (n=3). Samples that had qualifiers of "J" and "U" (J= under reporting limit and U=non-detectable) were dismissed from analysis. Six PFAS compounds with reportable average concentrations were found in Fields Point Filter Cake with compound EtFOSAA having the highest concentration of 10 ug/kg. Compounds PFDoA and PFPes were unique to Fields Point filter cake.Six PFAS compounds with reportable average concentrations were found in Bucklin Point Filter Cake with compound PFOS having the highest concentration of 18 ug/kg. Compounds PFTRDA and PFUnA were unique to Bucklin Point filter Cake. There was no significant difference between filter cake PFAS compound concentration and facility.(P=`r summaryFCAK`)
 
 
 
@@ -174,13 +173,14 @@ ggplot(FP_SIU,mapping=aes(Compound,textResult,color=Compound))+geom_point()+face
   labs(title="Avg. Reportable Conc.(ng/L) of PFAS compounds found in Fields Point Industrial Users")+
   ylab("Avg. Conc. (ng/L)")+xlab("Compound")+ theme(text = element_text(size = 8)) 
 
-
+model_FPSIU<- lm(textResult~Point.location,data=FP_SIU)
+summaryFPSIU<-get_regression_summaries(model_FPSIU) %>% pull(p_value)
 
 
 
 
 ```
-**Figure 4:**
+**Figure 4:**Average reportable concentrations (ng/L) of PFAS compounds found in major industries thought to be discharging wastewater containing PFAS compounds to Fields Point. Each industry's water was only sampled once or twice during the nine month study. RI Resource Recovery and Mahr Federal discharged the highest concentrations of PFAS compounds to Fields Point while RI Resource Recovery and Textron, Inc contributed the highest number of PFAS compounds to Fields Point.  There is a statistical difference between the average PFAS concentration and industry (P=`r summaryFPSIU`).
 
 
 
@@ -195,13 +195,13 @@ ggplot(BP_SIU,mapping=aes(Compound,textResult,color=Compound))+geom_point()+face
   labs(title="Avg. Reportable Conc.(ng/L) of PFAS compounds found in Bucklin Point Industrial Users")+
   ylab("Avg. Conc. (ng/L)")+xlab("Compound")+theme(text = element_text(size = 8)) 
 
-
-
+model_BPSIU<- lm(textResult~Point.location,data=BP_SIU)
+summaryBPSIU<-get_regression_summaries(model_BPSIU) %>% pull(p_value)
 
 
 
 ```
-**Figure 5:**
+**Figure 5:**Average reportable concentrations (ng/L) of PFAS compounds found in major industries thought to be discharging wastewater containing PFAS compounds to Bucklin Point. Each industry's water was only sampled once or twice during the nine month study. Providence Metallizing Company, inc. discharged the highest concentrations of PFAS compounds to Bucklin Point while Conopco, Inc. and Ecological Fibers Inc. contributed the highest number of PFAS compounds to Bucklin Point.  There is a statistical difference between the average PFAS concentration and industry (P=`r summaryBPSIU`)
 
 
 
@@ -209,8 +209,10 @@ ggplot(BP_SIU,mapping=aes(Compound,textResult,color=Compound))+geom_point()+face
 
 Although EPA method 537.1 analyzes wastewater samples for 28 compounds and biosolid samples for 32 compounds, it is apparent that only 13 PFAS compounds are typically found in both Narragansett Bay wastewater facilities and 8 PFAS compounds are typically found in respective biosolid samples.  It was also determined that there was no statistical difference between average influent and effluent concentrations for each compound.  This means that wastewater facilities do a poor job at removing these types of contaminants. Multiple studies reveal that WWTFs are ineffective at removing PFAS compounds via traditional methods, so these results were expected (Coggan et al. 2019, Gallen et al. 2018, and Ziyad et al. 2020). It is also important to note that all observed average concentrations were below EPA regulatory drinking water limit of 70 ng/L for PFOS and PFOA. If EPA implements a wastewater PFAS limit that is equal to the EPA PFAS drinking water limit, the Narragansett Bay Commission would still be in compliance and not receive fines. 
 
- Most of the detected PFAS compounds in the wastewater were short-chained per-fluorinated (PFAAs) compounds meaning they have fewer than six carbons in their backbone that are fully fluorinated.  Short chained PFAS compounds are more water soluble and are less likely to adsorb to solid matrices (Ziyad et al. 2020). Long chained PFAS compounds like EtFOSAA and MeFOSAA contain more than six fluorinated carbons in their backbone. These PFAS compounds were two compounds only found in biosolid samples.  This is likely due to long carbon chained PFAS compounds being less soluble and have a higher sorption potential to solids (Gallen et al. 2018).  Although some compounds are removed as filter cake/biosolid, these biosolid samples still contain PFAS and would need to undergo further treatment prior to using this biosolid for any land application.  
+ Most of the detected PFAS compounds in Fields point and Bucklin point were short-chained per-fluorinated (PFAAs) compounds meaning they have fewer than six carbons in their backbone that are fully fluorinated.  Short chained PFAS compounds are more water soluble and are less likely to adsorb to solid matrices (Ziyad et al. 2020). Long chained PFAS compounds like EtFOSAA and MeFOSAA contain more than six fluorinated carbons in their backbone. These PFAS compounds were two compounds only detected in biosolid samples. This is likely due to long carbon chained PFAS compounds being less soluble and have a higher sorption potential to solids (Gallen et al. 2018).  Although some compounds are absorbed to the solid phase as filter cake/biosolid, these biosolid samples still contain PFAS and would need to undergo further treatment prior to using this biosolid for any land application.  
  
-Industries discharging PFAS contaminated water were also analyzed, and it was observed that industrial PFAS compound concentrations were much higher than concentrations observed in the influent and effluent at both Fields Point and Bucklin Point.  Rhode Island Resource Recovery and Mahr Federal Inc.  discharge the highest concentrations of PFAS compounds into the Fields Point wastewater facility.  Providence Metallizing Company Inc. and Ecological Fibers, Inc discharge the highest concentrations of PFAS compounds into Bucklin Point.  These concentrations ranged from 0ng/L to 2000 ng/L.  Average daily loads would need to be calculated to determine how much of an effect these industries have on PFAS concentrations inside the wastewater facilities. These industries may need to implement forms of pretreatment to limit the amount of PFAS concentrations discharged into the Fields Point and Bucklin Point influents.  Knowing that these industries discharge the highest concentrations of PFAS compounds is important because if there is an increase in PFAS concentrations at Fields or Bucklin Point, the Narragansett Bay can point to these industries as a source.  
+Industries discharging PFAS contaminated water were also analyzed, and it was observed that industrial PFAS compound concentrations were much higher than concentrations observed in the influent and effluent at both Fields Point and Bucklin Point.  Rhode Island Resource Recovery and Mahr Federal Inc.  discharge the highest concentrations of PFAS compounds into the Fields Point wastewater facility.  Providence Metallizing Company Inc. and Ecological Fibers, Inc discharge the highest concentrations of PFAS compounds into Bucklin Point. There were statistical differences between PFAS compound concentrations and the type of industry discharging wastewater to each facility. This means that certain industries discharge water containing higher concentrations of PFAS compounds that other industries.
+
+Average daily loads would need to be calculated to determine how much of an effect these industries have on PFAS concentrations inside the wastewater facilities. These industries may need to implement forms of pretreatment to limit the amount of PFAS concentrations discharged into the Fields Point and Bucklin Point influents.  Knowing what industries discharge the highest concentrations of PFAS compounds is important because if there is an increase in PFAS concentrations at Fields or Bucklin Point, the Narragansett Bay can point to these industries as a potential source.  
 
 
